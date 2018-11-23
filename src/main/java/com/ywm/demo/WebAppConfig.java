@@ -2,8 +2,10 @@ package com.ywm.demo;
 
 import com.ywm.demo.annotation.MemberAnnotation;
 import com.ywm.demo.annotation.TokenAnnotation;
-import com.ywm.demo.interceptor.*;
-import org.springframework.beans.factory.annotation.Autowired;
+import com.ywm.demo.interceptor.MemberInteceptor;
+import com.ywm.demo.interceptor.ResourceAuthHandleInterceptor;
+import com.ywm.demo.interceptor.SignInteceptor;
+import com.ywm.demo.interceptor.TokenInteceptor;
 import org.springframework.context.annotation.Configuration;
 import org.springframework.web.servlet.HandlerInterceptor;
 import org.springframework.web.servlet.config.annotation.DefaultServletHandlerConfigurer;

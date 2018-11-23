@@ -1,18 +1,13 @@
 package com.ywm.demo.interceptor;
 
-import com.ywm.demo.annotation.MemberAnnotation;
-import com.ywm.demo.annotation.TokenAnnotation;
 import org.springframework.stereotype.Component;
 import org.springframework.util.StringUtils;
 import org.springframework.web.method.HandlerMethod;
-import org.springframework.web.servlet.HandlerInterceptor;
 import org.springframework.web.servlet.handler.HandlerInterceptorAdapter;
 
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
-import javax.servlet.http.HttpSession;
 import java.io.PrintWriter;
-import java.lang.reflect.Method;
 
 /**
  * 查询登录接口验证
