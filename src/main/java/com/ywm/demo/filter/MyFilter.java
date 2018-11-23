@@ -23,9 +23,9 @@ public class MyFilter implements Filter {
         HttpServletRequest request = (HttpServletRequest) servletRequest;
         String requestUrl = request.getRequestURI();
 
-        System.out.println("测试过滤器1---请求开始");
-        logger.info("过滤到的请求-->" + requestUrl);
-        System.out.println("测试过滤器1---请求结束");
+//        System.out.println("测试过滤器1---请求开始");
+//        logger.info("过滤到的请求-->" + requestUrl);
+//        System.out.println("测试过滤器1---请求结束");
         filterChain.doFilter(servletRequest, servletResponse);
     }
 
