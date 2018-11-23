@@ -5,7 +5,6 @@ import com.ywm.demo.annotation.TokenAnnotation;
 import com.ywm.demo.interceptor.*;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.context.annotation.Configuration;
-import org.springframework.web.servlet.AsyncHandlerInterceptor;
 import org.springframework.web.servlet.HandlerInterceptor;
 import org.springframework.web.servlet.config.annotation.DefaultServletHandlerConfigurer;
 import org.springframework.web.servlet.config.annotation.InterceptorRegistry;
@@ -13,10 +12,6 @@ import org.springframework.web.servlet.config.annotation.WebMvcConfigurationSupp
 
 @Configuration
 public class WebAppConfig extends WebMvcConfigurationSupport {
-    @Autowired
-    private MyInterceptor myInterceptor;
-    @Autowired
-    private AuthCheckInteceptor authCheckInteceptor;
 
     @Override
     public void addInterceptors(InterceptorRegistry registry) {

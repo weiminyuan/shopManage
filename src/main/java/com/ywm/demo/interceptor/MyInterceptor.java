@@ -7,6 +7,7 @@ import org.springframework.stereotype.Component;
 import org.springframework.web.method.HandlerMethod;
 import org.springframework.web.servlet.HandlerInterceptor;
 import org.springframework.web.servlet.ModelAndView;
+import org.springframework.web.servlet.handler.HandlerInterceptorAdapter;
 
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
@@ -15,7 +16,7 @@ import java.util.Arrays;
 import java.util.Map;
 
 @Component
-public class MyInterceptor implements HandlerInterceptor {
+public class MyInterceptor extends HandlerInterceptorAdapter {
 
     private Logger logger = LogManager.getLogger(MyInterceptor.class);
 
