@@ -22,7 +22,7 @@ public class EchartsController {
 
     @RequestMapping("/")
     public String hello() {
-        return "/pdf/pdf";
+        return "/firstPdf";
     }
 
     @RequestMapping("/save")
@@ -42,7 +42,7 @@ public class EchartsController {
             }
             //生成图片的地址
             String path= PdfHelper.getPath();
-            String filePath = path+"static/images/pdf/echartsMap.jpg";
+            String filePath = path+"static/picture/pdf/echartsMap.jpg";
             File imagesFile = new File(filePath);
             if(imagesFile.exists()){
                 imagesFile.delete();

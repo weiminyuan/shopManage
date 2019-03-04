@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <style>
+        div {
+            width: 200px;
+            height: 200px;
+            border: 1px solid red;
+        }
+    </style>
+</head>
+<body>
+    <input type="text" placeholder="输入内容">
+    <button>send</button>
+    <!--显示结果-->
+    <div></div>
+
+</body>
+    <script type="text/javascript">
+        var input = document.querySelector("input");
+        var button = document.querySelector("button");
+        var div = document.querySelector("div");
+
+        // var socket = new WebSocket("ws://localhost:9998/echo");
+        var socket = new WebSocket("ws://echo.websocket.org");
+        socket.onopen = function()
+        {
+           div.innerHTML = '链接成功。。。';
+        };
+            
+        button.onclick = function (ev) {
+            var value = input.value;
+            socket.send(value);
+        }
+
+        socket.onmessage = function (ev) {
+            var data = ev.data;
+            var old = div.innerHTML;
+            alert(old+'/n'+data);
+            div.innerHTML = old+'</br>'+data;
+        }
+    </script>
+
+</html>

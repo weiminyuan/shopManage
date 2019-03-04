@@ -33,14 +33,10 @@ public class PdfHelper {
      * @param ftlPath
      * @param ftlName
      * @param o
-     * @return
-     * @throws TemplateNotFoundException
-     * @throws MalformedTemplateNameException
-     * @throws ParseException
      * @throws IOException
      * @throws TemplateException
      */
-    public static String getPdfContent(String ftlPath, String ftlName, Object o) throws TemplateNotFoundException, MalformedTemplateNameException, ParseException, IOException, TemplateException {
+    public static String getPdfContent(String ftlPath, String ftlName, Object o) throws IOException, TemplateException {
         return useTemplate(ftlPath, ftlName, o);
     }
 
@@ -49,14 +45,10 @@ public class PdfHelper {
      * @param ftlPath
      * @param ftlName
      * @param o
-     * @return
-     * @throws TemplateNotFoundException
-     * @throws MalformedTemplateNameException
-     * @throws ParseException
      * @throws IOException
      * @throws TemplateException
      */
-    public static String useTemplate(String ftlPath, String ftlName, Object o) throws TemplateNotFoundException, MalformedTemplateNameException, ParseException, IOException, TemplateException {
+    public static String useTemplate(String ftlPath, String ftlName, Object o) throws IOException, TemplateException {
 
         String html = null;
 
